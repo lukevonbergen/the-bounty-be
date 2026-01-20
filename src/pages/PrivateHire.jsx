@@ -37,24 +37,60 @@ const PrivateHire = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission
     console.log('Form submitted:', formData);
     alert('Thank you for your enquiry! We will be in touch shortly.');
   };
 
   const features = [
-    'Exclusive area hire or full venue',
+    'Stunning riverside setting',
+    'Exclusive use of terrace area',
     'Customised food & drinks packages',
-    'Sport shown on request',
-    'Music and entertainment options',
-    'Friendly, experienced staff',
+    'Flexible seating arrangements',
+    'Dedicated service team',
+    'Boat access for guests arriving by water',
   ];
 
   return (
-    <main>
+    <main id="main-content">
       <Helmet>
-        <title>Private Hire | Annie Twomey's - Events & Parties Southgate</title>
-        <meta name="description" content="Host your private event at Annie Twomey's Southgate. Birthday parties, work events, wakes, and celebrations. Customised packages available. Enquire now." />
+        <title>Private Hire | The Bounty Pub Bourne End | Riverside Event Venue Thames</title>
+        <meta name="description" content="Host your private event at The Bounty riverside pub in Bourne End. Perfect for birthdays, anniversaries, family gatherings & wakes. Stunning Thames views, riverside terrace for 40 guests, boat access. Enquire now." />
+        <meta name="keywords" content="private hire Bourne End, riverside event venue Thames, birthday party venue Buckinghamshire, riverside celebration, Thames private hire, Cockmarsh event venue, private party pub" />
+        <meta property="og:title" content="Private Hire | The Bounty Pub Bourne End" />
+        <meta property="og:description" content="Host your special celebration at our stunning riverside venue on the Thames. Terrace for 40, inside for 30, boat access available." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://thebountypub.co.uk/private-hire" />
+        <link rel="canonical" href="https://thebountypub.co.uk/private-hire" />
+        <script type="application/ld+json">{`
+          {
+            "@context": "https://schema.org",
+            "@type": "EventVenue",
+            "name": "The Bounty - Private Hire",
+            "description": "Riverside private event venue on the Thames at Cockmarsh, Bourne End. Perfect for birthdays, anniversaries, family gatherings and wakes.",
+            "url": "https://thebountypub.co.uk/private-hire",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Cockmarsh",
+              "addressLocality": "Bourne End",
+              "addressRegion": "Buckinghamshire",
+              "postalCode": "SL8 5RG",
+              "addressCountry": "GB"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 51.5667,
+              "longitude": -0.7167
+            },
+            "maximumAttendeeCapacity": 70,
+            "amenityFeature": [
+              {"@type": "LocationFeatureSpecification", "name": "Riverside Terrace", "value": true},
+              {"@type": "LocationFeatureSpecification", "name": "Boat Access", "value": true},
+              {"@type": "LocationFeatureSpecification", "name": "Catering Available", "value": true}
+            ],
+            "isAccessibleForFree": false,
+            "publicAccess": false
+          }
+        `}</script>
       </Helmet>
 
       {/* Hero Section */}
@@ -62,13 +98,13 @@ const PrivateHire = () => {
         <div
           className="hero-background"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=2074)',
+            backgroundImage: 'url(https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?q=80&w=2070)',
           }}
         ></div>
         <div className="hero-overlay"></div>
         <div className="hero-content">
           <h1 className="hero-title">Private Hire</h1>
-          <p className="hero-location">Celebrate with us</p>
+          <p className="hero-location">Celebrate riverside</p>
         </div>
       </section>
 
@@ -76,15 +112,17 @@ const PrivateHire = () => {
       <section className="section-dark">
         <div className="container">
           <div className="section-header reveal">
-            <h2 className="section-title">Host Your Event at Annie Twomey's</h2>
+            <h2 className="section-title">Your Riverside Celebration</h2>
             <p className="section-subtitle">
-              Whether it's a birthday, work party, retirement do, or wake - we've got you covered.
-              Our warm, welcoming space is perfect for gatherings of all sizes.
+              There's no setting quite like The Bounty for your special occasion. Whether it's a milestone
+              birthday, anniversary, or simply a gathering of friends, our unique riverside location
+              provides a memorable backdrop for celebrations of all sizes.
             </p>
             <p className="section-subtitle" style={{ marginTop: '1rem' }}>
-              With live sport on tap, a pool table, darts, and great food and drink, your guests will have everything they need.
+              Imagine your guests arriving by boat, stepping onto our terrace as the sun sets over
+              the Thames. It's an experience they won't forget.
             </p>
-            <div className="celtic-border"></div>
+            <div className="wave-border"></div>
           </div>
         </div>
       </section>
@@ -108,7 +146,7 @@ const PrivateHire = () => {
                       color: 'var(--text-secondary)',
                     }}
                   >
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2D5A3D" strokeWidth="3">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-teal)" strokeWidth="3">
                       <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
                     {feature}
@@ -120,10 +158,11 @@ const PrivateHire = () => {
               <div
                 style={{
                   height: '400px',
-                  backgroundImage: 'url(https://images.unsplash.com/photo-1525268323446-0505b6fe7778?q=80&w=2072)',
+                  backgroundImage: 'url(https://images.unsplash.com/photo-1529543544277-750e8562ccb5?q=80&w=2070)',
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                   border: '1px solid var(--border-color)',
+                  borderRadius: '4px',
                 }}
               ></div>
             </div>
@@ -136,6 +175,9 @@ const PrivateHire = () => {
         <div className="container">
           <div className="section-header reveal">
             <h2 className="section-title">Capacity</h2>
+            <p className="section-subtitle" style={{ marginBottom: '2rem' }}>
+              Our intimate riverside setting is perfect for smaller, more personal gatherings.
+            </p>
             <div style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(2, 1fr)',
@@ -148,34 +190,66 @@ const PrivateHire = () => {
                 padding: '2rem',
                 background: 'var(--secondary-bg)',
                 border: '1px solid var(--border-color)',
+                borderRadius: '4px',
               }}>
-                <span style={{ display: 'block', fontSize: '3rem', color: 'var(--highlight-gold)', fontWeight: '700' }}>80</span>
-                <span style={{ color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '1px', fontSize: '0.85rem' }}>Standing</span>
+                <span style={{ display: 'block', fontSize: '3rem', color: 'var(--highlight-gold)', fontWeight: '700' }}>40</span>
+                <span style={{ color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '1px', fontSize: '0.85rem' }}>Terrace</span>
               </div>
               <div style={{
                 textAlign: 'center',
                 padding: '2rem',
                 background: 'var(--secondary-bg)',
                 border: '1px solid var(--border-color)',
+                borderRadius: '4px',
               }}>
-                <span style={{ display: 'block', fontSize: '3rem', color: 'var(--highlight-gold)', fontWeight: '700' }}>50</span>
-                <span style={{ color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '1px', fontSize: '0.85rem' }}>Seated</span>
+                <span style={{ display: 'block', fontSize: '3rem', color: 'var(--highlight-gold)', fontWeight: '700' }}>30</span>
+                <span style={{ color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '1px', fontSize: '0.85rem' }}>Inside</span>
               </div>
             </div>
             <p style={{ color: 'var(--text-muted)', marginTop: '1.5rem', textAlign: 'center' }}>
-              Flexible layouts to suit your needs
+              Flexible layouts to suit your event
             </p>
           </div>
         </div>
       </section>
 
-      {/* Enquiry Form */}
+      {/* Event Types */}
       <section className="section-darker">
         <div className="container">
           <div className="section-header reveal">
-            <h2 className="section-title">Get in Touch</h2>
+            <h2 className="section-title">Perfect For</h2>
+            <div className="wave-border"></div>
+          </div>
+          <div className="event-grid reveal">
+            <div className="event-card" style={{ background: 'var(--primary-bg)' }}>
+              <div style={{ padding: '2rem', textAlign: 'center' }}>
+                <h4 style={{ fontSize: '1.25rem', marginBottom: '0.75rem', color: 'var(--text-primary)', fontStyle: 'italic' }}>Birthday Celebrations</h4>
+                <p style={{ color: 'var(--text-secondary)', margin: 0 }}>Mark your milestone with a riverside party your guests will remember.</p>
+              </div>
+            </div>
+            <div className="event-card" style={{ background: 'var(--primary-bg)' }}>
+              <div style={{ padding: '2rem', textAlign: 'center' }}>
+                <h4 style={{ fontSize: '1.25rem', marginBottom: '0.75rem', color: 'var(--text-primary)', fontStyle: 'italic' }}>Family Gatherings</h4>
+                <p style={{ color: 'var(--text-secondary)', margin: 0 }}>Bring the family together in a beautiful, relaxed setting.</p>
+              </div>
+            </div>
+            <div className="event-card" style={{ background: 'var(--primary-bg)' }}>
+              <div style={{ padding: '2rem', textAlign: 'center' }}>
+                <h4 style={{ fontSize: '1.25rem', marginBottom: '0.75rem', color: 'var(--text-primary)', fontStyle: 'italic' }}>Wakes & Memorials</h4>
+                <p style={{ color: 'var(--text-secondary)', margin: 0 }}>A peaceful riverside setting for celebrating a life well lived.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Enquiry Form */}
+      <section className="section-dark">
+        <div className="container">
+          <div className="section-header reveal">
+            <h2 className="section-title">Make an Enquiry</h2>
             <p className="section-subtitle">
-              Fill out the form below and we'll get back to you to discuss your event.
+              Tell us about your event and we'll get back to you to discuss how we can help.
             </p>
           </div>
 
@@ -231,8 +305,9 @@ const PrivateHire = () => {
                 >
                   <option value="">Select event type</option>
                   <option value="birthday">Birthday</option>
-                  <option value="work">Work Event</option>
-                  <option value="wake">Wake</option>
+                  <option value="anniversary">Anniversary</option>
+                  <option value="family">Family Gathering</option>
+                  <option value="memorial">Wake / Memorial</option>
                   <option value="other">Other</option>
                 </select>
               </div>
@@ -263,14 +338,14 @@ const PrivateHire = () => {
               </div>
 
               <div className="form-group">
-                <label className="form-label" htmlFor="message">Message</label>
+                <label className="form-label" htmlFor="message">Tell Us About Your Event</label>
                 <textarea
                   id="message"
                   name="message"
                   className="form-textarea"
                   value={formData.message}
                   onChange={handleChange}
-                  placeholder="Tell us about your event..."
+                  placeholder="What are you celebrating? Any special requirements?"
                 ></textarea>
               </div>
 
@@ -281,36 +356,38 @@ const PrivateHire = () => {
 
             <div style={{ paddingLeft: '2rem' }}>
               <div style={{
-                background: 'var(--primary-bg)',
+                background: 'var(--secondary-bg)',
                 padding: '2rem',
                 border: '1px solid var(--border-color)',
                 marginBottom: '2rem',
+                borderRadius: '4px',
               }}>
                 <h3 style={{ color: 'var(--highlight-gold)', marginBottom: '1rem', textTransform: 'uppercase', letterSpacing: '1px', fontSize: '1rem' }}>
-                  Prefer to Call?
+                  Prefer to Email?
                 </h3>
                 <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem' }}>
-                  Give us a call to discuss your requirements:
+                  Send us your enquiry directly:
                 </p>
-                <a href="tel:02012345678" style={{ color: 'var(--text-primary)', fontSize: '1.5rem', fontWeight: '600' }}>
-                  020 1234 5678
+                <a href="mailto:info@thebountypub.co.uk" style={{ color: 'var(--text-primary)', fontSize: '1.1rem' }}>
+                  info@thebountypub.co.uk
                 </a>
               </div>
 
               <div style={{
-                background: 'var(--primary-bg)',
+                background: 'var(--secondary-bg)',
                 padding: '2rem',
                 border: '1px solid var(--border-color)',
+                borderRadius: '4px',
               }}>
                 <h3 style={{ color: 'var(--highlight-gold)', marginBottom: '1rem', textTransform: 'uppercase', letterSpacing: '1px', fontSize: '1rem' }}>
-                  Email Us
+                  Good to Know
                 </h3>
-                <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem' }}>
-                  Send us an email with your enquiry:
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', marginBottom: '0.75rem' }}>
+                  We recommend booking well in advance, especially for summer dates.
                 </p>
-                <a href="mailto:info@annietwomeys.co.uk" style={{ color: 'var(--text-primary)', fontSize: '1.1rem' }}>
-                  info@annietwomeys.co.uk
-                </a>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>
+                  Seasonal availability may affect event options - we'll discuss all the details when we get in touch.
+                </p>
               </div>
             </div>
           </div>

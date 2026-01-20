@@ -1,8 +1,14 @@
+# robots.txt for The Bounty Pub
+# https://thebountypub.co.uk
+
 User-agent: *
 Allow: /
 
-# Sitemaps
-Sitemap: https://theoldswanbeaconsfield.co.uk/sitemap.xml
+# Sitemap location
+Sitemap: https://thebountypub.co.uk/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
 
 # Disallow common bot traps and admin areas
 Disallow: /admin/
@@ -12,11 +18,8 @@ Disallow: /node_modules/
 
 # Allow search engines to crawl all main pages
 Allow: /
-Allow: /about
 Allow: /menu
-Allow: /events
-Allow: /book
+Allow: /whats-on
+Allow: /private-hire
 Allow: /contact
-
-# Crawl delay for polite bots
-Crawl-delay: 1
+Allow: /location

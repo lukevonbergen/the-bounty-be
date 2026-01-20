@@ -3,30 +3,37 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer" role="contentinfo">
       <div className="container">
         <div className="footer-grid">
           {/* Opening Hours */}
           <div className="footer-section">
             <h4>Opening Hours</h4>
             <p>
-              Monday - Thursday: 12pm - 11pm<br />
-              Friday - Saturday: 12pm - 12am<br />
-              Sunday: 12pm - 10:30pm
+              Tuesday: Closed<br />
+              Wednesday: Closed<br />
+              Thursday: Closed<br />
+              Friday: 4:30–10:30 pm<br />
+              Saturday: 11:30 am–10:30 pm<br />
+              Sunday: 11:30 am–10:30 pm<br />
+              Monday: Closed
             </p>
           </div>
 
           {/* Logo/Crest Center */}
           <div className="footer-section footer-logo">
-            <div className="footer-logo-text">Annie Twomey's</div>
+            <img src="/images/hero/thebounty-logo.png" alt="The Bounty" className="footer-logo-img" />
             <p style={{ color: 'var(--text-secondary)', marginTop: '0.5rem' }}>
-              Southgate, London
+              Cockmarsh, Bourne End
+            </p>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginTop: '0.25rem' }}>
+              On the River Thames
             </p>
 
             {/* Social Icons */}
             <div className="footer-social">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/thebounty1/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
@@ -36,13 +43,23 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/the_bounty1/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
               >
                 <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </a>
+              <a
+                href="https://www.tiktok.com/@thebounty.official"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="TikTok"
+              >
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/>
                 </svg>
               </a>
             </div>
@@ -52,7 +69,6 @@ const Footer = () => {
           <div className="footer-section" style={{ textAlign: 'right' }}>
             <h4>Quick Links</h4>
             <nav style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-              <Link to="/live-sport" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>Live Sport</Link>
               <Link to="/menu" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>Menu</Link>
               <Link to="/whats-on" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>What's On</Link>
               <Link to="/private-hire" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>Private Hire</Link>
@@ -63,9 +79,9 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="footer-bottom">
-          <p>Annie Twomey's - 123 High Street, Southgate, London N14 6AA</p>
-          <p>Tel: 020 1234 5678 | info@annietwomeys.co.uk</p>
-          <p style={{ marginTop: '1rem' }}>&copy; {new Date().getFullYear()} Annie Twomey's. All rights reserved.</p>
+          <p>The Bounty, Cockmarsh, Bourne End SL8 5RG</p>
+          <p>info@thebountypub.co.uk</p>
+          <p style={{ marginTop: '1rem' }}>&copy; {new Date().getFullYear()} The Bounty. All rights reserved.</p>
         </div>
       </div>
     </footer>

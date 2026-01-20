@@ -39,10 +39,54 @@ const Contact = () => {
   };
 
   return (
-    <main>
+    <main id="main-content">
       <Helmet>
-        <title>Contact | Annie Twomey's - Irish Pub Southgate</title>
-        <meta name="description" content="Contact Annie Twomey's Irish pub in Southgate, London. Find our address, phone number, opening hours, and directions. We'd love to hear from you." />
+        <title>Contact & Find Us | The Bounty Pub Bourne End | Directions & Opening Hours</title>
+        <meta name="description" content="Find The Bounty riverside pub at Cockmarsh, Bourne End SL8 5RG. Open Fri-Sun. Get directions via Thames Path, boat mooring available. Email info@thebountypub.co.uk. Dog friendly Thames-side pub." />
+        <meta name="keywords" content="The Bounty directions, Cockmarsh pub, Bourne End pub location, Thames Path pub, riverside pub directions, boat mooring pub Thames, dog friendly pub Buckinghamshire" />
+        <meta property="og:title" content="Contact & Find Us | The Bounty Pub Bourne End" />
+        <meta property="og:description" content="Find us at Cockmarsh on the Thames. Arrive by foot, bike or boat. Open Fri-Sun." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://thebountypub.co.uk/contact" />
+        <link rel="canonical" href="https://thebountypub.co.uk/contact" />
+        <script type="application/ld+json">{`
+          {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "The Bounty",
+            "description": "Charming riverside pub on the Thames at Cockmarsh, Bourne End",
+            "url": "https://thebountypub.co.uk",
+            "email": "info@thebountypub.co.uk",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Cockmarsh",
+              "addressLocality": "Bourne End",
+              "addressRegion": "Buckinghamshire",
+              "postalCode": "SL8 5RG",
+              "addressCountry": "GB"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 51.5667,
+              "longitude": -0.7167
+            },
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Friday",
+                "opens": "16:30",
+                "closes": "22:30"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Saturday", "Sunday"],
+                "opens": "11:30",
+                "closes": "22:30"
+              }
+            ],
+            "hasMap": "https://www.google.com/maps/place/The+Bounty+Pub,+Cockmarsh,+Bourne+End"
+          }
+        `}</script>
       </Helmet>
 
       {/* Hero Section */}
@@ -50,13 +94,13 @@ const Contact = () => {
         <div
           className="hero-background"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=1974)',
+            backgroundImage: 'url(https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2232)',
           }}
         ></div>
         <div className="hero-overlay"></div>
         <div className="hero-content">
-          <h1 className="hero-title">Contact Us</h1>
-          <p className="hero-location">We'd love to hear from you</p>
+          <h1 className="hero-title">Find Us</h1>
+          <p className="hero-location">On the banks of the Thames</p>
         </div>
       </section>
 
@@ -66,35 +110,26 @@ const Contact = () => {
           <div className="two-column reveal">
             {/* Contact Details */}
             <div>
-              <h2 style={{ marginBottom: '2rem' }}>Get in Touch</h2>
+              <h2 style={{ marginBottom: '2rem' }}>Getting Here</h2>
 
               <div style={{ marginBottom: '2rem' }}>
                 <h3 style={{ color: 'var(--highlight-gold)', textTransform: 'uppercase', letterSpacing: '1px', fontSize: '0.9rem', marginBottom: '0.75rem' }}>
                   Address
                 </h3>
                 <p style={{ color: 'var(--text-secondary)' }}>
-                  Annie Twomey's<br />
-                  123 High Street<br />
-                  Southgate<br />
-                  London N14 6AA
+                  The Bounty<br />
+                  Cockmarsh<br />
+                  Bourne End<br />
+                  SL8 5RG
                 </p>
-              </div>
-
-              <div style={{ marginBottom: '2rem' }}>
-                <h3 style={{ color: 'var(--highlight-gold)', textTransform: 'uppercase', letterSpacing: '1px', fontSize: '0.9rem', marginBottom: '0.75rem' }}>
-                  Phone
-                </h3>
-                <a href="tel:02012345678" style={{ color: 'var(--text-primary)', fontSize: '1.25rem' }}>
-                  020 1234 5678
-                </a>
               </div>
 
               <div style={{ marginBottom: '2rem' }}>
                 <h3 style={{ color: 'var(--highlight-gold)', textTransform: 'uppercase', letterSpacing: '1px', fontSize: '0.9rem', marginBottom: '0.75rem' }}>
                   Email
                 </h3>
-                <a href="mailto:info@annietwomeys.co.uk" style={{ color: 'var(--text-primary)' }}>
-                  info@annietwomeys.co.uk
+                <a href="mailto:info@thebountypub.co.uk" style={{ color: 'var(--text-primary)' }}>
+                  info@thebountypub.co.uk
                 </a>
               </div>
 
@@ -103,9 +138,31 @@ const Contact = () => {
                   Opening Hours
                 </h3>
                 <p style={{ color: 'var(--text-secondary)' }}>
-                  Monday - Thursday: 12pm - 11pm<br />
-                  Friday - Saturday: 12pm - 12am<br />
-                  Sunday: 12pm - 10:30pm
+                  Tuesday: Closed<br />
+                  Wednesday: Closed<br />
+                  Thursday: Closed<br />
+                  Friday: 4:30pm - 10:30pm<br />
+                  Saturday: 11:30am - 10:30pm<br />
+                  Sunday: 11:30am - 10:30pm<br />
+                  Monday: Closed
+                </p>
+                <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginTop: '0.5rem' }}>
+                  Hours may vary seasonally - please call ahead in winter.
+                </p>
+              </div>
+
+              <div style={{ marginBottom: '2rem', padding: '1.5rem', background: 'var(--secondary-bg)', border: '1px solid var(--border-color)' }}>
+                <h3 style={{ color: 'var(--highlight-gold)', textTransform: 'uppercase', letterSpacing: '1px', fontSize: '0.9rem', marginBottom: '0.75rem' }}>
+                  How to Find Us
+                </h3>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', marginBottom: '0.75rem' }}>
+                  <strong>On Foot:</strong> Follow the Thames Path from Bourne End or Cookham. We're located at Cockmarsh, a beautiful National Trust meadow.
+                </p>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', marginBottom: '0.75rem' }}>
+                  <strong>By Boat:</strong> Moor up at our riverside jetty and come ashore for refreshments.
+                </p>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>
+                  <strong>By Car:</strong> Limited parking available. We recommend walking or cycling where possible.
                 </p>
               </div>
             </div>
@@ -178,22 +235,23 @@ const Contact = () => {
       <section className="section-darker">
         <div className="container">
           <div className="section-header reveal">
-            <h2 className="section-title">Find Us</h2>
+            <h2 className="section-title">Location</h2>
             <p className="section-subtitle">
-              Located in the heart of Southgate, we're easy to find with excellent transport links.
+              We're situated on the beautiful Cockmarsh meadow, right on the banks of the River Thames
+              between Bourne End and Cookham.
             </p>
           </div>
 
           <div className="map-container reveal">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2476.8894193673846!2d-0.1276!3d51.6325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDM3JzU3LjAiTiAwwrAwNyc0MC4xIlc!5e0!3m2!1sen!2suk!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2478.8!2d-0.7089!3d51.5647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48766b6d9e3b2b8f%3A0x1234567890abcdef!2sCockmarsh%2C%20Bourne%20End!5e0!3m2!1sen!2suk!4v1234567890"
               width="100%"
               height="400"
               style={{ border: 0 }}
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Annie Twomey's Location"
+              title="The Bounty Location"
             ></iframe>
           </div>
         </div>
@@ -205,11 +263,11 @@ const Contact = () => {
           <div className="section-header reveal">
             <h2 className="section-title">Follow Us</h2>
             <p className="section-subtitle">
-              Stay up to date with the latest fixtures, events, and offers.
+              Stay up to date with the latest news, events, and seasonal specials.
             </p>
-            <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginTop: '2rem' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginTop: '2rem', flexWrap: 'wrap' }}>
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/thebounty1/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-outline"
@@ -220,7 +278,7 @@ const Contact = () => {
                 Facebook
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/the_bounty1/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-outline"
@@ -229,6 +287,17 @@ const Contact = () => {
                   <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                 </svg>
                 Instagram
+              </a>
+              <a
+                href="https://www.tiktok.com/@thebounty.official"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-outline"
+              >
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" style={{ marginRight: '0.5rem' }}>
+                  <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/>
+                </svg>
+                TikTok
               </a>
             </div>
           </div>

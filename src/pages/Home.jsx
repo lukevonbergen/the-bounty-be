@@ -26,43 +26,94 @@ const Home = () => {
   }, []);
 
   return (
-    <main>
+    <main id="main-content">
       <Helmet>
-        <title>Annie Twomey's | Irish Pub Southgate, London | Live Sport & Music</title>
-        <meta name="description" content="Annie Twomey's - Family-run Irish pub in Southgate, London. Live sport on multiple screens, pool, darts, and live music every weekend. Experience authentic Irish hospitality." />
-        <meta name="keywords" content="Irish pub Southgate, live sport pub London, pool darts pub, live music Southgate, Annie Twomey's, GAA London, Premier League pub" />
-        <meta property="og:title" content="Annie Twomey's | Irish Pub Southgate" />
-        <meta property="og:description" content="Family-run Irish pub with live sport, pool, darts, and live music. In the heart of Southgate, London." />
+        <title>The Bounty Pub | Riverside Pub Bourne End, Buckinghamshire | Thames Views</title>
+        <meta name="description" content="The Bounty is a charming riverside pub on the River Thames at Cockmarsh, Bourne End. Enjoy stunning views, delicious food, real ales, and a beautiful beer garden. Open Friday-Sunday." />
+        <meta name="keywords" content="riverside pub Bourne End, Thames pub Buckinghamshire, Cockmarsh pub, beer garden Thames, pub with river views, The Bounty pub, pubs near Marlow, pubs near Cookham, dog friendly pub Thames" />
+        <meta property="og:title" content="The Bounty Pub | Riverside Pub Bourne End, Buckinghamshire" />
+        <meta property="og:description" content="Award-worthy riverside pub on the Thames at Cockmarsh. Stunning views, delicious food, real ales & warm hospitality. Arrive by foot, bike or boat!" />
         <meta property="og:type" content="restaurant" />
-        <link rel="canonical" href="https://annietwomeys.co.uk" />
+        <meta property="og:url" content="https://thebountypub.co.uk" />
+        <meta property="og:image" content="https://thebountypub.co.uk/images/hero/pub-front.jpg" />
+        <meta property="og:locale" content="en_GB" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="The Bounty Pub | Riverside Pub Bourne End" />
+        <meta name="twitter:description" content="Charming riverside pub on the Thames at Cockmarsh. Stunning views, great food & warm hospitality." />
+        <link rel="canonical" href="https://thebountypub.co.uk" />
+        <script type="application/ld+json">{`
+          {
+            "@context": "https://schema.org",
+            "@type": "Restaurant",
+            "name": "The Bounty",
+            "image": "https://thebountypub.co.uk/images/hero/pub-front.jpg",
+            "url": "https://thebountypub.co.uk",
+            "telephone": "",
+            "email": "info@thebountypub.co.uk",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Cockmarsh",
+              "addressLocality": "Bourne End",
+              "addressRegion": "Buckinghamshire",
+              "postalCode": "SL8 5RG",
+              "addressCountry": "GB"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 51.5667,
+              "longitude": -0.7167
+            },
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Friday",
+                "opens": "16:30",
+                "closes": "22:30"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Saturday", "Sunday"],
+                "opens": "11:30",
+                "closes": "22:30"
+              }
+            ],
+            "servesCuisine": ["British", "Pub Food"],
+            "priceRange": "££",
+            "acceptsReservations": false,
+            "amenityFeature": [
+              {"@type": "LocationFeatureSpecification", "name": "River Views", "value": true},
+              {"@type": "LocationFeatureSpecification", "name": "Beer Garden", "value": true},
+              {"@type": "LocationFeatureSpecification", "name": "Dog Friendly", "value": true},
+              {"@type": "LocationFeatureSpecification", "name": "Boat Mooring", "value": true}
+            ]
+          }
+        `}</script>
       </Helmet>
 
       {/* Hero Section */}
-      <section className="hero">
+      <section className="hero hero-minimal">
         <div
           className="hero-background"
           style={{
-            backgroundImage: 'url(/images/annies/homepage-hero.avif)',
+            backgroundImage: 'url(/images/hero/pub-front.jpg)',
           }}
         ></div>
-        <div className="hero-overlay"></div>
-        <div className="hero-content">
-          <p className="hero-subtitle animate-fade-in-up">Experience the Heart of</p>
-          <h1 className="hero-title animate-fade-in-up animate-delay-1">Annie Twomey's</h1>
-          <p className="hero-location animate-fade-in-up animate-delay-2">Southgate</p>
-        </div>
+        <div className="hero-overlay-minimal"></div>
 
-        {/* Quick Actions Bar */}
-        <div className="quick-actions">
-          <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="quick-action">
-            Southgate, London
-          </a>
-          <Link to="/menu" className="quick-action">
-            View Menu
+        {/* Quick Actions Bar at bottom */}
+        <div className="hero-actions-bar">
+          <Link to="/private-hire" className="hero-action-btn">
+            Private Hire
           </Link>
-          <a href="tel:02012345678" className="quick-action">
-            020 1234 5678
-          </a>
+          <Link to="/menu" className="hero-action-btn">
+            Menus
+          </Link>
+          <Link to="/whats-on" className="hero-action-btn">
+            What's On
+          </Link>
+          <Link to="/contact" className="hero-action-btn">
+            Find Us
+          </Link>
         </div>
       </section>
 
@@ -70,17 +121,19 @@ const Home = () => {
       <section className="section-dark">
         <div className="container">
           <div className="section-header reveal">
-            <h2 className="section-title">Annie Twomey's</h2>
+            <h2 className="section-title">Welcome to The Bounty</h2>
             <p className="section-subtitle">
-              A sports-oriented Irish pub with numerous TV screens, pool table and darts board.
-              Irish family-run and situated in the heart of Southgate.
+              Nestled on the peaceful banks of the River Thames at Cockmarsh, The Bounty offers a truly
+              unique riverside experience. Whether arriving by foot, bike, or boat, you'll find a warm welcome,
+              refreshing drinks, and stunning views across the water.
             </p>
             <p className="section-subtitle" style={{ marginTop: '1rem' }}>
-              All live sport shown. Live music every weekend.
+              Our riverside beer garden is the perfect spot to while away a summer afternoon,
+              watching boats drift by and enjoying the tranquil beauty of this special corner of the Thames.
             </p>
-            <div className="celtic-border"></div>
+            <div className="wave-border"></div>
             <Link to="/contact" className="btn btn-outline" style={{ marginTop: '1.5rem' }}>
-              Read More
+              Plan Your Visit
             </Link>
           </div>
         </div>
@@ -93,13 +146,13 @@ const Home = () => {
             <div
               className="feature-card-bg"
               style={{
-                backgroundImage: 'url(https://images.unsplash.com/photo-1522778119026-d647f0596c20?q=80&w=2070)',
+                backgroundImage: 'url(/images/site-images/outside-bar.webp)',
               }}
             ></div>
             <div className="feature-card-overlay"></div>
             <div className="feature-card-content">
-              <h3>Live Sport</h3>
-              <Link to="/live-sport" className="btn btn-primary">View Fixtures</Link>
+              <h3>Riverside Garden</h3>
+              <Link to="/contact" className="btn btn-primary">Visit Us</Link>
             </div>
           </div>
 
@@ -107,13 +160,13 @@ const Home = () => {
             <div
               className="feature-card-bg"
               style={{
-                backgroundImage: 'url(https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=2070)',
+                backgroundImage: 'url(/images/site-images/pub-front.jpeg)',
               }}
             ></div>
             <div className="feature-card-overlay"></div>
             <div className="feature-card-content">
-              <h3>Live Music</h3>
-              <Link to="/whats-on" className="btn btn-primary">Find Out More</Link>
+              <h3>The Bounty</h3>
+              <Link to="/menu" className="btn btn-primary">See Menu</Link>
             </div>
           </div>
 
@@ -121,13 +174,13 @@ const Home = () => {
             <div
               className="feature-card-bg"
               style={{
-                backgroundImage: 'url(https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=2074)',
+                backgroundImage: 'url(/images/site-images/people-outside.webp)',
               }}
             ></div>
             <div className="feature-card-overlay"></div>
             <div className="feature-card-content">
-              <h3>Private Parties</h3>
-              <Link to="/private-hire" className="btn btn-primary">Book Now</Link>
+              <h3>Private Events</h3>
+              <Link to="/private-hire" className="btn btn-primary">Enquire</Link>
             </div>
           </div>
         </div>
@@ -137,34 +190,35 @@ const Home = () => {
       <section className="section-dark food-section">
         <div className="container">
           <div className="section-header reveal">
-            <h2 className="section-title">Food at Annie's</h2>
+            <h2 className="section-title">Food at The Bounty</h2>
             <p className="section-subtitle">
-              Enjoy authentic Irish fare and pub classics. From hearty stews to the perfect Sunday roast,
-              our kitchen serves up comfort food done right.
+              From classic pub favourites to seasonal specials, our kitchen serves hearty,
+              honest food made with care. Enjoy a leisurely lunch watching the boats go by,
+              or gather friends for a riverside feast.
             </p>
-            <div className="celtic-border"></div>
+            <div className="wave-border"></div>
             <Link to="/menu" className="btn btn-primary" style={{ marginTop: '1.5rem' }}>
-              View Menu
+              View Our Menu
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Live Sport Banner */}
+      {/* River Views Banner */}
       <section className="banner">
         <div
           className="banner-bg"
           style={{
-            backgroundImage: 'url(/images/annies/live-sport-bg.jpeg)',
+            backgroundImage: 'url(/images/site-images/people-sat-on-bench.webp)',
           }}
         ></div>
         <div className="banner-overlay"></div>
         <div className="banner-content reveal">
-          <div className="celtic-border" style={{ marginBottom: '2rem' }}></div>
-          <h2>Live Sport</h2>
-          <p>Every game. Every screen.</p>
-          <Link to="/live-sport" className="btn btn-primary">View Fixtures</Link>
-          <div className="celtic-border" style={{ marginTop: '2rem' }}></div>
+          <div className="wave-border" style={{ marginBottom: '2rem' }}></div>
+          <h2>Life on the River</h2>
+          <p>Where the water meets good company</p>
+          <Link to="/whats-on" className="btn btn-primary">What's On</Link>
+          <div className="wave-border" style={{ marginTop: '2rem' }}></div>
         </div>
       </section>
 
@@ -174,8 +228,8 @@ const Home = () => {
           <div className="section-header reveal">
             <h2 className="section-title">What's On</h2>
             <p className="section-subtitle">
-              From live Premier League and GAA to weekend live music sessions,
-              there's always something happening at Annie Twomey's.
+              From sunny weekends on the terrace to cosy evenings by the fire,
+              there's always a reason to visit The Bounty.
             </p>
           </div>
 
@@ -184,14 +238,14 @@ const Home = () => {
               <div
                 className="event-card-image"
                 style={{
-                  backgroundImage: 'url(https://images.unsplash.com/photo-1665413813194-3b80d79b6421?q=80&w=2070&auto=format&fit=crop)',
+                  backgroundImage: 'url(/images/site-images/front-garden.webp)',
                 }}
               ></div>
               <div className="event-card-content">
-                <h4>Premier League</h4>
-                <p>Every match live on our big screens. Join the atmosphere for all the action.</p>
-                <Link to="/live-sport" className="btn btn-outline" style={{ padding: '0.75rem 1.5rem' }}>
-                  Find Out More
+                <h4>Sunday Roasts</h4>
+                <p>Join us every Sunday for our legendary roast dinners, served with all the trimmings.</p>
+                <Link to="/menu" className="btn btn-outline" style={{ padding: '0.75rem 1.5rem' }}>
+                  View Menu
                 </Link>
               </div>
             </div>
@@ -200,14 +254,14 @@ const Home = () => {
               <div
                 className="event-card-image"
                 style={{
-                  backgroundImage: 'url(https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?q=80&w=2070)',
+                  backgroundImage: 'url(/images/site-images/more-people-outside.webp)',
                 }}
               ></div>
               <div className="event-card-content">
-                <h4>Live GAA</h4>
-                <p>Catch all the hurling and football action. The best place in London for GAA.</p>
-                <Link to="/live-sport" className="btn btn-outline" style={{ padding: '0.75rem 1.5rem' }}>
-                  Find Out More
+                <h4>Summer on the Terrace</h4>
+                <p>Our riverside terrace is the perfect spot for lazy afternoons in the sun.</p>
+                <Link to="/contact" className="btn btn-outline" style={{ padding: '0.75rem 1.5rem' }}>
+                  Find Us
                 </Link>
               </div>
             </div>
@@ -216,14 +270,14 @@ const Home = () => {
               <div
                 className="event-card-image"
                 style={{
-                  backgroundImage: 'url(https://images.unsplash.com/photo-1511192336575-5a79af67a629?q=80&w=2064)',
+                  backgroundImage: 'url(/images/site-images/more-people-on-bench.webp)',
                 }}
               ></div>
               <div className="event-card-content">
-                <h4>Weekend Live Music</h4>
-                <p>Live bands and traditional Irish sessions every Friday and Saturday night.</p>
-                <Link to="/whats-on" className="btn btn-outline" style={{ padding: '0.75rem 1.5rem' }}>
-                  Find Out More
+                <h4>Arrive by Boat</h4>
+                <p>Moor up and enjoy a well-earned pint after a day on the water.</p>
+                <Link to="/contact" className="btn btn-outline" style={{ padding: '0.75rem 1.5rem' }}>
+                  Mooring Info
                 </Link>
               </div>
             </div>
@@ -237,20 +291,20 @@ const Home = () => {
           <div
             className="split-image"
             style={{
-              backgroundImage: 'url(https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=2074)',
+              backgroundImage: 'url(/images/site-images/people-outside.webp)',
             }}
           ></div>
           <div
             className="split-image"
             style={{
-              backgroundImage: 'url(https://images.unsplash.com/photo-1525268323446-0505b6fe7778?q=80&w=2072)',
+              backgroundImage: 'url(/images/site-images/outside-bar.webp)',
             }}
           ></div>
         </div>
         <div className="banner-overlay"></div>
         <div className="banner-content reveal">
           <h2>Private Hire</h2>
-          <p>Host your event with us</p>
+          <p>Celebrate your special occasion riverside</p>
           <Link to="/private-hire" className="btn btn-primary">Enquire Now</Link>
         </div>
       </section>
@@ -259,9 +313,9 @@ const Home = () => {
       <section className="newsletter">
         <div className="container">
           <div className="section-header reveal">
-            <h2 className="section-title">News & Offers</h2>
+            <h2 className="section-title">Stay in the Loop</h2>
             <p className="section-subtitle">
-              Stay up to date with the latest from Annie Twomey's. Sign up to our mailing list.
+              Sign up for news about events, seasonal menus, and everything happening at The Bounty.
             </p>
             <form className="newsletter-form" onSubmit={(e) => e.preventDefault()}>
               <input
