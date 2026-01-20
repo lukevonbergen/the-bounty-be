@@ -53,21 +53,21 @@ const PrivateHire = () => {
   return (
     <main id="main-content">
       <Helmet>
-        <title>Private Hire | The Bounty Pub Bourne End | Riverside Event Venue Thames</title>
-        <meta name="description" content="Host your private event at The Bounty riverside pub in Bourne End. Perfect for birthdays, anniversaries, family gatherings & wakes. Stunning Thames views, riverside terrace for 40 guests, boat access. Enquire now." />
-        <meta name="keywords" content="private hire Bourne End, riverside event venue Thames, birthday party venue Buckinghamshire, riverside celebration, Thames private hire, Cockmarsh event venue, private party pub" />
-        <meta property="og:title" content="Private Hire | The Bounty Pub Bourne End" />
-        <meta property="og:description" content="Host your special celebration at our stunning riverside venue on the Thames. Terrace for 40, inside for 30, boat access available." />
+        <title>Functions | The Bounty Pub Bourne End | Live Bands, Buffet, Catering & Disco</title>
+        <meta name="description" content="Host your function at The Bounty riverside pub in Bourne End. Live bands, buffet catering, outside catering and disco services available. Stunning Thames views, riverside terrace for 40 guests. Enquire now." />
+        <meta name="keywords" content="functions Bourne End, live band venue Thames, buffet catering Buckinghamshire, outside catering riverside, disco venue pub, party venue Cockmarsh, event venue Thames" />
+        <meta property="og:title" content="Functions | The Bounty Pub Bourne End" />
+        <meta property="og:description" content="Host your special celebration at our stunning riverside venue. Live bands, buffet, outside catering & disco available." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://thebountypub.co.uk/private-hire" />
-        <link rel="canonical" href="https://thebountypub.co.uk/private-hire" />
+        <meta property="og:url" content="https://thebountypub.co.uk/functions" />
+        <link rel="canonical" href="https://thebountypub.co.uk/functions" />
         <script type="application/ld+json">{`
           {
             "@context": "https://schema.org",
             "@type": "EventVenue",
-            "name": "The Bounty - Private Hire",
-            "description": "Riverside private event venue on the Thames at Cockmarsh, Bourne End. Perfect for birthdays, anniversaries, family gatherings and wakes.",
-            "url": "https://thebountypub.co.uk/private-hire",
+            "name": "The Bounty - Functions",
+            "description": "Riverside function venue on the Thames at Cockmarsh, Bourne End. Live bands, buffet catering, outside catering and disco services available.",
+            "url": "https://thebountypub.co.uk/functions",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "Cockmarsh",
@@ -83,9 +83,10 @@ const PrivateHire = () => {
             },
             "maximumAttendeeCapacity": 70,
             "amenityFeature": [
+              {"@type": "LocationFeatureSpecification", "name": "Live Music", "value": true},
+              {"@type": "LocationFeatureSpecification", "name": "Catering Services", "value": true},
               {"@type": "LocationFeatureSpecification", "name": "Riverside Terrace", "value": true},
-              {"@type": "LocationFeatureSpecification", "name": "Boat Access", "value": true},
-              {"@type": "LocationFeatureSpecification", "name": "Catering Available", "value": true}
+              {"@type": "LocationFeatureSpecification", "name": "Boat Access", "value": true}
             ],
             "isAccessibleForFree": false,
             "publicAccess": false
@@ -103,7 +104,7 @@ const PrivateHire = () => {
         ></div>
         <div className="hero-overlay"></div>
         <div className="hero-content">
-          <h1 className="hero-title">Private Hire</h1>
+          <h1 className="hero-title">Functions</h1>
           <p className="hero-location">Celebrate riverside</p>
         </div>
       </section>
@@ -123,6 +124,116 @@ const PrivateHire = () => {
               the Thames. It's an experience they won't forget.
             </p>
             <div className="wave-border"></div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Services - 4 Functions */}
+      <section className="section-darker">
+        <div className="container">
+          <div className="section-header reveal">
+            <h2 className="section-title">Our Services</h2>
+            <div className="wave-border"></div>
+          </div>
+
+          {/* Live Bands */}
+          <div id="live-bands" className="reveal" style={{ marginBottom: '4rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center' }}>
+              <div>
+                <h3 style={{ fontSize: '1.75rem', marginBottom: '1rem', color: 'var(--highlight-gold)', fontStyle: 'italic' }}>Live Bands</h3>
+                <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem' }}>
+                  Turn your celebration into an unforgettable night with live music on the riverside. Our venue provides the perfect acoustic setting for bands of all styles, from jazz and blues to rock and pop covers.
+                </p>
+                <p style={{ color: 'var(--text-secondary)' }}>
+                  Whether you're planning a birthday bash, anniversary party, or just want to give your guests a night to remember, our experienced team will help coordinate everything with your chosen performers.
+                </p>
+              </div>
+              <div
+                style={{
+                  height: '300px',
+                  backgroundImage: 'url(https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=2070)',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  border: '1px solid var(--border-color)',
+                  borderRadius: '4px',
+                }}
+              ></div>
+            </div>
+          </div>
+
+          {/* Buffet */}
+          <div id="buffet" className="reveal" style={{ marginBottom: '4rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center' }}>
+              <div
+                style={{
+                  height: '300px',
+                  backgroundImage: 'url(https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=2070)',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  border: '1px solid var(--border-color)',
+                  borderRadius: '4px',
+                }}
+              ></div>
+              <div>
+                <h3 style={{ fontSize: '1.75rem', marginBottom: '1rem', color: 'var(--highlight-gold)', fontStyle: 'italic' }}>Buffet</h3>
+                <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem' }}>
+                  Let your guests graze and mingle with our delicious buffet options. We offer a range of menus to suit every taste and budget, from classic finger food spreads to more substantial hot and cold selections.
+                </p>
+                <p style={{ color: 'var(--text-secondary)' }}>
+                  All our buffets are freshly prepared on-site using quality ingredients. We can accommodate dietary requirements including vegetarian, vegan, and gluten-free options. Just let us know your needs when booking.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Outside Catering */}
+          <div id="outside-catering" className="reveal" style={{ marginBottom: '4rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center' }}>
+              <div>
+                <h3 style={{ fontSize: '1.75rem', marginBottom: '1rem', color: 'var(--highlight-gold)', fontStyle: 'italic' }}>Outside Catering</h3>
+                <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem' }}>
+                  Planning an event at your own venue? We can bring The Bounty experience to you. Our outside catering service delivers the same quality food and professional service wherever you need it.
+                </p>
+                <p style={{ color: 'var(--text-secondary)' }}>
+                  From garden parties and marquee weddings to corporate events and private gatherings, we'll work with you to create a menu that fits your occasion perfectly. Equipment, staff and setup can all be arranged.
+                </p>
+              </div>
+              <div
+                style={{
+                  height: '300px',
+                  backgroundImage: 'url(https://images.unsplash.com/photo-1467453678174-768ec283a940?q=80&w=2044)',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  border: '1px solid var(--border-color)',
+                  borderRadius: '4px',
+                }}
+              ></div>
+            </div>
+          </div>
+
+          {/* Disco */}
+          <div id="disco" className="reveal">
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center' }}>
+              <div
+                style={{
+                  height: '300px',
+                  backgroundImage: 'url(https://images.unsplash.com/photo-1571266028243-e4733b0f0bb0?q=80&w=2070)',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  border: '1px solid var(--border-color)',
+                  borderRadius: '4px',
+                }}
+              ></div>
+              <div>
+                <h3 style={{ fontSize: '1.75rem', marginBottom: '1rem', color: 'var(--highlight-gold)', fontStyle: 'italic' }}>Disco</h3>
+                <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem' }}>
+                  Get the party started with our disco package. We can arrange professional DJ services with full sound and lighting equipment to transform The Bounty into your own riverside dance floor.
+                </p>
+                <p style={{ color: 'var(--text-secondary)' }}>
+                  Perfect for milestone birthdays, engagement parties, and celebrations where you want to dance the night away. Our DJs can cater to any music preference and will work with you to create the perfect playlist for your event.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -213,36 +324,6 @@ const PrivateHire = () => {
         </div>
       </section>
 
-      {/* Event Types */}
-      <section className="section-darker">
-        <div className="container">
-          <div className="section-header reveal">
-            <h2 className="section-title">Perfect For</h2>
-            <div className="wave-border"></div>
-          </div>
-          <div className="event-grid reveal">
-            <div className="event-card" style={{ background: 'var(--primary-bg)' }}>
-              <div style={{ padding: '2rem', textAlign: 'center' }}>
-                <h4 style={{ fontSize: '1.25rem', marginBottom: '0.75rem', color: 'var(--text-primary)', fontStyle: 'italic' }}>Birthday Celebrations</h4>
-                <p style={{ color: 'var(--text-secondary)', margin: 0 }}>Mark your milestone with a riverside party your guests will remember.</p>
-              </div>
-            </div>
-            <div className="event-card" style={{ background: 'var(--primary-bg)' }}>
-              <div style={{ padding: '2rem', textAlign: 'center' }}>
-                <h4 style={{ fontSize: '1.25rem', marginBottom: '0.75rem', color: 'var(--text-primary)', fontStyle: 'italic' }}>Family Gatherings</h4>
-                <p style={{ color: 'var(--text-secondary)', margin: 0 }}>Bring the family together in a beautiful, relaxed setting.</p>
-              </div>
-            </div>
-            <div className="event-card" style={{ background: 'var(--primary-bg)' }}>
-              <div style={{ padding: '2rem', textAlign: 'center' }}>
-                <h4 style={{ fontSize: '1.25rem', marginBottom: '0.75rem', color: 'var(--text-primary)', fontStyle: 'italic' }}>Wakes & Memorials</h4>
-                <p style={{ color: 'var(--text-secondary)', margin: 0 }}>A peaceful riverside setting for celebrating a life well lived.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Enquiry Form */}
       <section className="section-dark">
         <div className="container">
@@ -294,7 +375,7 @@ const PrivateHire = () => {
               </div>
 
               <div className="form-group">
-                <label className="form-label" htmlFor="eventType">Event Type *</label>
+                <label className="form-label" htmlFor="eventType">Function Type *</label>
                 <select
                   id="eventType"
                   name="eventType"
@@ -303,12 +384,13 @@ const PrivateHire = () => {
                   onChange={handleChange}
                   required
                 >
-                  <option value="">Select event type</option>
-                  <option value="birthday">Birthday</option>
-                  <option value="anniversary">Anniversary</option>
-                  <option value="family">Family Gathering</option>
-                  <option value="memorial">Wake / Memorial</option>
-                  <option value="other">Other</option>
+                  <option value="">Select function type</option>
+                  <option value="live-bands">Live Bands</option>
+                  <option value="buffet">Buffet</option>
+                  <option value="outside-catering">Outside Catering</option>
+                  <option value="disco">Disco</option>
+                  <option value="multiple">Multiple Services</option>
+                  <option value="other">Other / Not Sure</option>
                 </select>
               </div>
 

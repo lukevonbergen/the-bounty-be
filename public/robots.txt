@@ -20,6 +20,6 @@ Disallow: /node_modules/
 Allow: /
 Allow: /menu
 Allow: /whats-on
-Allow: /private-hire
+Allow: /functions
 Allow: /contact
 Allow: /location

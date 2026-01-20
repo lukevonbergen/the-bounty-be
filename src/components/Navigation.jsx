@@ -23,13 +23,13 @@ const Navigation = () => {
 
   const navLinks = [
     {
-      path: '/private-hire',
+      path: '/functions',
       label: 'Functions',
       dropdown: [
-        { path: '/private-hire#live-bands', label: 'Live Bands' },
-        { path: '/private-hire#buffet', label: 'Buffet' },
-        { path: '/private-hire#outside-catering', label: 'Outside Catering' },
-        { path: '/private-hire#disco', label: 'Disco' },
+        { path: '/functions#live-bands', label: 'Live Bands' },
+        { path: '/functions#buffet', label: 'Buffet' },
+        { path: '/functions#outside-catering', label: 'Outside Catering' },
+        { path: '/functions#disco', label: 'Disco' },
       ]
     },
     { path: '/menu', label: 'Menus' },

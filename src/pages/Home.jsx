@@ -102,8 +102,8 @@ const Home = () => {
 
         {/* Quick Actions Bar at bottom */}
         <div className="hero-actions-bar">
-          <Link to="/private-hire" className="hero-action-btn">
-            Private Hire
+          <Link to="/functions" className="hero-action-btn">
+            Functions
           </Link>
           <Link to="/menu" className="hero-action-btn">
             Menus
@@ -180,7 +180,7 @@ const Home = () => {
             <div className="feature-card-overlay"></div>
             <div className="feature-card-content">
               <h3>Private Events</h3>
-              <Link to="/private-hire" className="btn btn-primary">Enquire</Link>
+              <Link to="/functions" className="btn btn-primary">Enquire</Link>
             </div>
           </div>
         </div>
@@ -285,7 +285,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Private Hire Banner */}
+      {/* Functions Banner */}
       <section className="split-banner">
         <div className="split-banner-images">
           <div
@@ -303,9 +303,9 @@ const Home = () => {
         </div>
         <div className="banner-overlay"></div>
         <div className="banner-content reveal">
-          <h2>Private Hire</h2>
+          <h2>Functions</h2>
           <p>Celebrate your special occasion riverside</p>
-          <Link to="/private-hire" className="btn btn-primary">Enquire Now</Link>
+          <Link to="/functions" className="btn btn-primary">Enquire Now</Link>
         </div>
       </section>
 

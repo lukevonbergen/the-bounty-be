@@ -71,7 +71,7 @@ const Footer = () => {
             <nav style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
               <Link to="/menu" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>Menu</Link>
               <Link to="/whats-on" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>What's On</Link>
-              <Link to="/private-hire" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>Private Hire</Link>
+              <Link to="/functions" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>Functions</Link>
               <Link to="/contact" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>Contact</Link>
             </nav>
           </div>
